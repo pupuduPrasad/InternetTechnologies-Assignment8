@@ -1,0 +1,129 @@
+Case 2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Case 2</title>
+
+  <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #2f3e46;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      color: white;
+    }
+
+    h1 {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      font-size: 24px;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .main-wrapper {
+      position: relative;
+    }
+
+    .box {
+      width: 150px;
+      height: 80px;
+      margin: 0 10px;
+      border-radius: 5px;
+    }
+
+    .box-one {
+      position: absolute;
+      left: 0;
+      top: -100px;
+      background-color: red;
+    }
+
+    .queue-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      width: 1000px;
+      height: 120px;
+      position: relative;
+    }
+
+    .box-two {
+      background-color: green;
+    }
+
+    .box-three {
+      background-color: blue;
+    }
+
+    .box-four {
+      background-color: yellow;
+    }
+
+    .box-five {
+      background-color: pink;
+    }
+
+    .box-six {
+      position: absolute;
+      bottom: -100px;
+      right: 0;
+      width: 150px;
+      height: 80px;
+      background-color: hotpink;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+<h1>Java Script Queue</h1>
+
+<div class="main-wrapper">
+  <div class="box box-one"></div>
+
+  <div class="queue-container">
+    <div class="box box-two"></div>
+    <div class="box box-three"></div>
+    <div class="box box-four"></div>
+    <div class="box box-five"></div>
+  </div>
+
+  <div class="box box-six"></div>
+
+</div>
+
+<script>
+  let styles = ["background: red", "background: green", "background: blue", "background: yellow", "background: pink", "background: hotpink"];
+
+  const function1 = () => {
+    let lastStyle = styles.pop();
+    styles.unshift(lastStyle);
+
+    document.getElementsByClassName('box')[0].style.cssText = styles[0];
+    document.getElementsByClassName('box')[1].style.cssText = styles[1];
+    document.getElementsByClassName('box')[2].style.cssText = styles[2];
+    document.getElementsByClassName('box')[3].style.cssText = styles[3];
+    document.getElementsByClassName('box')[4].style.cssText = styles[4];
+    document.getElementsByClassName('box')[5].style.cssText = styles[5];
+  }
+
+  setInterval(function1, 500)
+</script>
+</body>
+</html>
