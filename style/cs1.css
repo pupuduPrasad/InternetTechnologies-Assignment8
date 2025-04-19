@@ -1,0 +1,19 @@
+h1 {
+    color: hotpink;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 56px;
+    margin-bottom: 240px;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div {
+    color: cyan;
+    font-size: 32px;
+    font-family: "Open Sans", sans-serif;
+}
